@@ -1,0 +1,25 @@
+<configuration scan="true" scanPeriod="15 seconds">
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{HH:mm:ss.SSS} [%thread] %.-1level %logger{36} -
+                %msg%n</Pattern>
+        </layout>
+    </appender>
+
+    <appender name="multiplex"
+        class="de.huxhorn.lilith.logback.appender.ClassicMultiplexSocketAppender">
+        <Compressing>true</Compressing>
+        <!-- will automatically use correct default port -->
+        <ReconnectionDelay>10000</ReconnectionDelay>
+        <IncludeCallerData>true</IncludeCallerData>
+        <RemoteHosts>localhost</RemoteHosts>
+        <ApplicationIdentifier>Actor-Role
+        </ApplicationIdentifier>
+        <encoding>UTF-8</encoding>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="multiplex" />
+    </root>
+</configuration>
