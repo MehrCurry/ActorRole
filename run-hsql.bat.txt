@@ -1,1 +1,0 @@
-java -cp "%USERPROFILE%\.m2\repository\hsqldb\hsqldb\1.8.0.7\hsqldb-1.8.0.7.jar" org.hsqldb.Server -database.0 data\testdb -dbname.0 testdb
