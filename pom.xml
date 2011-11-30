@@ -3,10 +3,10 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>spielwiese</groupId>
   <artifactId>actor-role</artifactId>
-  <name>Actor Rolo JPA</name>
+  <name>Actor Role JPA</name>
   <version>0.0.1</version>
   <issueManagement>
-    <system>Trac</system>
+    <system>JIRA</system>
   </issueManagement>
   <ciManagement>
     <notifiers>
