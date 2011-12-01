@@ -21,8 +21,8 @@
     <developerConnection>scm|svn|http://vs163107.vserver.de/bdf/probanden/trunk</developerConnection>
   </scm>
   <properties>
-    <spring.version>3.0.6.RELEASE</spring.version>
-    <hibernate.version>4.0.0.CR6</hibernate.version>
+    <spring.version>[3.0.6,)</spring.version>
+    <hibernate.version>[3.5.0,3.9.9)</hibernate.version>
   </properties>
   <build>
     <resources>
