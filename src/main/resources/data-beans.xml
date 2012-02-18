@@ -38,13 +38,6 @@
 		</property>		
 	</bean>
 
-	<bean id="dao"
-		class="de.gzockoll.spielwiese.dao.JpaDao">
-		<property name="entityManagerFactory">
-			<ref bean="entityManagerFactory" />
-		</property>
-	</bean>
-
 	<bean
 		class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
 

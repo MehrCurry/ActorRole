@@ -1,12 +1,11 @@
 package de.gzockoll.prototype.control;
 
-import de.gzockoll.prototype.dao.Dao;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 public abstract class AbstractManager {
 
-	protected Dao dao;
-	
-	public void setDao(Dao dao) {
-		this.dao = dao;
-	}
+	@PersistenceContext
+	protected EntityManager em;
+
 }

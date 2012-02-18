@@ -9,6 +9,6 @@ public class Manager extends AbstractManager {
 
 	@Transactional(propagation = Propagation.REQUIRED)
 	public void persist(Actor a) {
-		dao.save(a);
+		em.persist(a);
 	}
 }
