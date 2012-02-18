@@ -70,10 +70,10 @@ public abstract class Actor implements Serializable {
 		this.commercialName = commercialName;
 	}
 
-	public ActorRole asRole(String rolename) {
+	public ActorRole asRole(Class clazz) {
 
 		for (ActorRole r : roles) {
-			if (r.getRoleName().equalsIgnoreCase(rolename))
+			if (r.getClass().equals(clazz))
 				return r;
 		}
 		return null;
@@ -88,5 +88,5 @@ public abstract class Actor implements Serializable {
 	}
 
 	protected Address address;
-	
+
 }

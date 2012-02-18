@@ -36,7 +36,7 @@ public class Main {
 		Person p = new Person("Guido", "Zockoll");
 
 		Account a = new Account("gzockoll", "bla");
-		Dealer d = (Dealer) org.asRole("Dealer");
+		Dealer d = (Dealer) org.asRole(Dealer.class);
 		d.setAccount(a);
 		manager.persist(org);
 
