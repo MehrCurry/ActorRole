@@ -1,6 +1,6 @@
-package de.gzockoll.spielwiese.control;
+package de.gzockoll.prototype.control;
 
-import de.gzockoll.spielwiese.dao.Dao;
+import de.gzockoll.prototype.dao.Dao;
 
 public abstract class AbstractManager {
 

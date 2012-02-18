@@ -1,8 +1,8 @@
-package de.gzockoll.spielwiese.dao;
+package de.gzockoll.prototype.dao;
 
 import org.springframework.orm.jpa.support.JpaDaoSupport;
 
-import de.gzockoll.spielwiese.entity.Actor;
+import de.gzockoll.prototype.entity.Actor;
 
 public class JpaDao extends JpaDaoSupport implements Dao {
 

@@ -1,4 +1,4 @@
-package de.gzockoll.spielwiese.entity.roles;
+package de.gzockoll.prototype.entity.roles;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,10 +7,10 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
-import de.gzockoll.spielwiese.entity.Account;
-import de.gzockoll.spielwiese.entity.Actor;
-import de.gzockoll.spielwiese.entity.ActorRole;
-import de.gzockoll.spielwiese.entity.Address;
+import de.gzockoll.prototype.entity.Account;
+import de.gzockoll.prototype.entity.Actor;
+import de.gzockoll.prototype.entity.ActorRole;
+import de.gzockoll.prototype.entity.Address;
 
 @Entity
 public class Dealer extends ActorRole {

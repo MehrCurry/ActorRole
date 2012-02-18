@@ -9,7 +9,7 @@
 
 
 	<bean id="mainFrame"
-		class="de.gzockoll.spielwiese.Main" init-method="init">
+		class="de.gzockoll.prototype.Main" init-method="init">
 		<property name="manager" ref="manager"/>
 	</bean>
 

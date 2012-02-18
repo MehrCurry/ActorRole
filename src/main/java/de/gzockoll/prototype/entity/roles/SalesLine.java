@@ -1,4 +1,4 @@
-package de.gzockoll.spielwiese.entity.roles;
+package de.gzockoll.prototype.entity.roles;
 
 import java.util.ArrayList;
 import java.util.List;

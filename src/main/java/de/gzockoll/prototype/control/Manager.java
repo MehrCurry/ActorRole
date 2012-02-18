@@ -1,9 +1,9 @@
-package de.gzockoll.spielwiese.control;
+package de.gzockoll.prototype.control;
 
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import de.gzockoll.spielwiese.entity.Actor;
+import de.gzockoll.prototype.entity.Actor;
 
 public class Manager extends AbstractManager {
 

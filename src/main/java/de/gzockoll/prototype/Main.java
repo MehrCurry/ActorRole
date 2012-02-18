@@ -1,11 +1,11 @@
-package de.gzockoll.spielwiese;
+package de.gzockoll.prototype;
 
-import de.gzockoll.spielwiese.control.Manager;
-import de.gzockoll.spielwiese.entity.Account;
-import de.gzockoll.spielwiese.entity.actor.Organization;
-import de.gzockoll.spielwiese.entity.actor.Person;
-import de.gzockoll.spielwiese.entity.roles.Dealer;
-import de.gzockoll.spielwiese.entity.roles.Salesman;
+import de.gzockoll.prototype.control.Manager;
+import de.gzockoll.prototype.entity.Account;
+import de.gzockoll.prototype.entity.actor.Organization;
+import de.gzockoll.prototype.entity.actor.Person;
+import de.gzockoll.prototype.entity.roles.Dealer;
+import de.gzockoll.prototype.entity.roles.Salesman;
 
 public class Main {
 

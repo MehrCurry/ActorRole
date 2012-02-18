@@ -1,9 +1,9 @@
-package de.gzockoll.spielwiese.entity.roles;
+package de.gzockoll.prototype.entity.roles;
 
 import javax.persistence.Entity;
 
-import de.gzockoll.spielwiese.entity.Actor;
-import de.gzockoll.spielwiese.entity.ActorRole;
+import de.gzockoll.prototype.entity.Actor;
+import de.gzockoll.prototype.entity.ActorRole;
 
 @Entity
 public class Salesman extends ActorRole {

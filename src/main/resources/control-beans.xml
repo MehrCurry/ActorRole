@@ -7,9 +7,9 @@
       http://www.springframework.org/schema/tx
       http://www.springframework.org/schema/tx/spring-tx.xsd">
  
-	<bean abstract="true" id="abstractManager" class="de.gzockoll.spielwiese.control.AbstractManager">
+	<bean abstract="true" id="abstractManager" class="de.gzockoll.prototype.control.AbstractManager">
 		<property name="dao" ref="dao" />
 	</bean>
 	
-	<bean id="manager" class="de.gzockoll.spielwiese.control.Manager" parent="abstractManager"/>
+	<bean id="manager" class="de.gzockoll.prototype.control.Manager" parent="abstractManager"/>
 </beans>

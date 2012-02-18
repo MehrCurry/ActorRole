@@ -1,4 +1,4 @@
-package de.gzockoll.spielwiese.actorrole.client;
+package de.gzockoll.prototype.actorrole.client;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

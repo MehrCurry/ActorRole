@@ -7,7 +7,7 @@
  * and open the template in the editor.
  */
 
-package de.gzockoll.spielwiese.entity;
+package de.gzockoll.prototype.entity;
 
 import java.io.Serializable;
 import java.util.ArrayList;

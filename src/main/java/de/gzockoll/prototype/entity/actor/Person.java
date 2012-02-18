@@ -7,7 +7,7 @@
  * and open the template in the editor.
  */
 
-package de.gzockoll.spielwiese.entity.actor;
+package de.gzockoll.prototype.entity.actor;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -19,7 +19,7 @@ import javax.persistence.PreUpdate;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import de.gzockoll.spielwiese.entity.Actor;
+import de.gzockoll.prototype.entity.Actor;
 
 /**
  *

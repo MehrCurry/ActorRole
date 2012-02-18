@@ -1,4 +1,4 @@
-package de.gzockoll.spielwiese.entity;
+package de.gzockoll.prototype.entity;
 
 import javax.persistence.Embeddable;
 import javax.persistence.Entity;
