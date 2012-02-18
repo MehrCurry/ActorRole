@@ -12,8 +12,4 @@ public class Agency extends ActorRole {
 		super(actor);
 	}
 
-	@Override
-	public String getRoleName() {
-		return "Agency";
-	}
 }

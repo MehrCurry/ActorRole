@@ -19,45 +19,47 @@ import javax.persistence.InheritanceType;
 import javax.persistence.ManyToOne;
 
 /**
- *
+ * 
  * @author Frank D. Martinez. fmartinez@asimovt.com
  */
 @Entity()
-@Inheritance(strategy=InheritanceType.JOINED)
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class ActorRole implements Serializable {
 
-    @Id()
-    @GeneratedValue()
-    protected Integer id;
-    
-    @ManyToOne()
-    protected Actor actor;
+	@Id()
+	@GeneratedValue()
+	protected Integer id;
 
-    public Integer getId() {
-        return id;
-    }
+	@ManyToOne()
+	protected Actor actor;
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public Integer getId() {
+		return id;
+	}
 
-    public Actor getActor() {
-        return actor;
-    }
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    public void setActor(Actor actor) {
-        this.actor = actor;
-    }
-    
-    public String getCommercialName() {
-        return actor == null ? null : actor.getCommercialName();
-    }
+	public Actor getActor() {
+		return actor;
+	}
 
-    public ActorRole(Actor actor) {
-        this.actor = actor;
-        actor.addRole(this);
-    }
-    
-    public abstract String getRoleName();
-    
+	public void setActor(Actor actor) {
+		this.actor = actor;
+	}
+
+	public String getCommercialName() {
+		return actor == null ? null : actor.getCommercialName();
+	}
+
+	public ActorRole(Actor actor) {
+		this.actor = actor;
+		actor.addRole(this);
+	}
+
+	public String getRoleName() {
+		return getClass().getSimpleName();
+	}
+
 }
