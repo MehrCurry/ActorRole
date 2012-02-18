@@ -7,11 +7,5 @@
       http://www.springframework.org/schema/tx
       http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-
-	<bean id="mainFrame"
-		class="de.gzockoll.prototype.Main" init-method="init">
-		<property name="manager" ref="manager"/>
-	</bean>
-
 	<tx:annotation-driven proxy-target-class="true" />
 </beans>
