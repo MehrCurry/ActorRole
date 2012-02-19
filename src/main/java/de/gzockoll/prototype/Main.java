@@ -3,7 +3,7 @@ package de.gzockoll.prototype;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import de.gzockoll.prototype.control.Manager;
+import de.gzockoll.prototype.control.Manger;
 import de.gzockoll.prototype.entity.Account;
 import de.gzockoll.prototype.entity.actor.Organization;
 import de.gzockoll.prototype.entity.actor.Person;
@@ -11,19 +11,20 @@ import de.gzockoll.prototype.entity.roles.Dealer;
 import de.gzockoll.prototype.entity.roles.Salesman;
 
 @Component
-public class Main {
+public class Main implements ActorService {
 
-	public Manager getManager() {
+	public Manger getManager() {
 		return manager;
 	}
 
-	public void setManager(Manager manager) {
+	public void setManager(Manger manager) {
 		this.manager = manager;
 	}
 
 	@Autowired
-	private Manager manager;
+	private Manger manager;
 
+	@Override
 	public void init() {
 
 		Organization org = new Organization("Test GmbH");

@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import de.gzockoll.prototype.ActorService;
 import de.gzockoll.prototype.Main;
 
 public class Launcher {
@@ -25,7 +26,7 @@ public class Launcher {
 			ApplicationContext ctx = new ClassPathXmlApplicationContext(
 					contextPaths);
 
-			Main main = ctx.getBean(Main.class);
+			ActorService main = ctx.getBean(Main.class);
 			main.init();
 		} catch (Throwable e) {
 			log.error("Spring:", e);

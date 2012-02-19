@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+	xmlns:jpa="http://aries.apache.org/xmlns/jpa/v1.1.0" xmlns:tx="http://aries.apache.org/xmlns/tx/v1.1.0">
+	<bean id="manager" class="de.gzockoll.prototype.control.ManagerImpl">
+		<jpa:unit property="em" unitname="prototype" />
+		<tx:transaction method="*" value="Required" />
+	</bean>
+	<bean id="actorService" class="de.gzockoll.Main">
+		<property name="manager" ref="manager" />
+	</bean>
+
+	<service id="manager" ref="manager"
+		interface="de.gzockoll.prototype.control.Manager" />
+	<service id="main" ref="actorService" interface="de.gzockoll.prototype.ActorService" />
+
+	<!-- DataSource Derby -->
+	<bean id="dataSourceDerby" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="org.apache.derby.jdbc.EmbeddedDriver" />
+		<property name="url" value="jdbc:derby:/temp/reportincident;create=true" />
+		<property name="username" value="" />
+		<property name="password" value="" />
+	</bean>
+
+	<!-- Expose DataSource as JNDI reference -->
+	<service ref="dataSourceDerby" interface="javax.sql.DataSource">
+		<service-properties>
+			<entry key="osgi.jndi.service.name" value="jdbc/reportincidentdb" />
+		</service-properties>
+	</service>
+</blueprint>

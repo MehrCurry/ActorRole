@@ -7,8 +7,12 @@ import org.springframework.transaction.annotation.Transactional;
 import de.gzockoll.prototype.entity.Actor;
 
 @Service
-public class Manager extends AbstractManager {
+public class ManagerImpl extends AbstractManager implements Manger {
 
+	/* (non-Javadoc)
+	 * @see de.gzockoll.prototype.control.Manger#persist(de.gzockoll.prototype.entity.Actor)
+	 */
+	@Override
 	@Transactional(propagation = Propagation.REQUIRED)
 	public void persist(Actor a) {
 		em.persist(a);
