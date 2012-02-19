@@ -1,4 +1,4 @@
-package de.gzockoll.prototype.entity;
+package de.gzockoll.prototype.actorrole.entity;
 
 import javax.persistence.Embeddable;
 import javax.persistence.Entity;

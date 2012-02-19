@@ -1,4 +1,4 @@
-package de.gzockoll.prototype.control;
+package de.gzockoll.prototype.actorrole.control;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

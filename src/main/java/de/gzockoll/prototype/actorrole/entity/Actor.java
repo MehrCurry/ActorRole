@@ -7,7 +7,7 @@
  * and open the template in the editor.
  */
 
-package de.gzockoll.prototype.entity;
+package de.gzockoll.prototype.actorrole.entity;
 
 import java.io.Serializable;
 import java.util.ArrayList;

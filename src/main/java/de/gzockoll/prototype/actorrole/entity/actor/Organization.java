@@ -7,13 +7,13 @@
  * and open the template in the editor.
  */
 
-package de.gzockoll.prototype.entity.actor;
+package de.gzockoll.prototype.actorrole.entity.actor;
 
 import java.io.Serializable;
 
 import javax.persistence.Entity;
 
-import de.gzockoll.prototype.entity.Actor;
+import de.gzockoll.prototype.actorrole.entity.Actor;
 
 /**
  *

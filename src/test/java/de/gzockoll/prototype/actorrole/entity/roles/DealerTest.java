@@ -1,4 +1,4 @@
-package de.gzockoll.prototype.entity.roles;
+package de.gzockoll.prototype.actorrole.entity.roles;
 
 import junit.framework.Assert;
 
@@ -6,8 +6,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import de.gzockoll.prototype.entity.Address;
-import de.gzockoll.prototype.entity.actor.Organization;
+import de.gzockoll.prototype.actorrole.entity.Address;
+import de.gzockoll.prototype.actorrole.entity.actor.Organization;
+import de.gzockoll.prototype.actorrole.entity.roles.Dealer;
 
 public class DealerTest {
 

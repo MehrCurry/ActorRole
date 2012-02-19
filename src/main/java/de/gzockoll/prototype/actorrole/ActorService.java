@@ -1,4 +1,4 @@
-package de.gzockoll.prototype;
+package de.gzockoll.prototype.actorrole;
 
 public interface ActorService {
 

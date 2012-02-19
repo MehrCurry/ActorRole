@@ -1,9 +1,9 @@
-package de.gzockoll.prototype.entity.roles;
+package de.gzockoll.prototype.actorrole.entity.roles;
 
 import javax.persistence.Entity;
 
-import de.gzockoll.prototype.entity.Actor;
-import de.gzockoll.prototype.entity.ActorRole;
+import de.gzockoll.prototype.actorrole.entity.Actor;
+import de.gzockoll.prototype.actorrole.entity.ActorRole;
 
 @Entity
 public class Promotor extends ActorRole {
