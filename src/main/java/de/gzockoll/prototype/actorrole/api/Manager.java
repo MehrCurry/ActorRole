@@ -1,11 +1,11 @@
-package de.gzockoll.prototype.actorrole.control;
+package de.gzockoll.prototype.actorrole.api;
 
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import de.gzockoll.prototype.actorrole.entity.Actor;
 
-public interface Manger {
+public interface Manager {
 
 	@Transactional(propagation = Propagation.REQUIRED)
 	public abstract void persist(Actor a);

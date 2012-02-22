@@ -15,7 +15,9 @@ http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
 		<class>de.gzockoll.prototype.actorrole.entity.role.Salesman</class>
 		<exclude-unlisted-classes>true</exclude-unlisted-classes>
 		<properties>
-			<property name="openjpa.Log" value="DefaultLevel=TRACE" />
+			<property name="openjpa.Log" value="DefaultLevel=INFO" />
+			<property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)" />
+			<property name="openjpa.jdbc.DBDictionary" value="derby" />
 		</properties>
 	</persistence-unit>
 </persistence>

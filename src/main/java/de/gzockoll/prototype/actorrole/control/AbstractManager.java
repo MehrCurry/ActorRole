@@ -8,4 +8,11 @@ public abstract class AbstractManager {
 	@PersistenceContext
 	protected EntityManager em;
 
+	public void setEm(EntityManager em) {
+		this.em = em;
+	}
+
+	public EntityManager getEm() {
+		return em;
+	}
 }

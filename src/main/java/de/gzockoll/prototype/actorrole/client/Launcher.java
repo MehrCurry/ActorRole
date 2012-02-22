@@ -5,8 +5,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import de.gzockoll.prototype.actorrole.ActorService;
 import de.gzockoll.prototype.actorrole.Main;
+import de.gzockoll.prototype.actorrole.api.ActorService;
 
 public class Launcher {
 	private static Logger log = LoggerFactory.getLogger(Launcher.class);

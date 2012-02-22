@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
-	xmlns:jpa="http://aries.apache.org/xmlns/jpa/v1.1.0" xmlns:tx="http://aries.apache.org/xmlns/tx/v1.1.0">
+	xmlns:jpa="http://aries.apache.org/xmlns/jpa/v1.1.0" xmlns:tx="http://aries.apache.org/xmlns/transactions/v1.0.0">
+
 	<bean id="manager" class="de.gzockoll.prototype.actorrole.control.ManagerImpl">
-		<jpa:unit property="em" unitname="prototype" />
+		<jpa:context property="em" unitname="prototype" />
 		<tx:transaction method="*" value="Required" />
 	</bean>
-	<bean id="actorService" class="de.gzockoll.prototype.actorrole.Main" init="init">
+
+	<service ref="manager" interface="de.gzockoll.prototype.actorrole.api.Manager" />
+
+	<bean id="main" class="de.gzockoll.prototype.actorrole.Main"
+		init-method="run">
 		<property name="manager" ref="manager" />
 	</bean>
 
-	<service id="manager" ref="manager"
-		interface="de.gzockoll.prototype.actorrole.control.Manager" />
-	<service id="main" ref="actorService" interface="de.gzockoll.prototype.actorrole.ActorService" />
+	<service ref="main" interface="de.gzockoll.prototype.actorrole.api.ActorService" />
 </blueprint>
