@@ -1,20 +1,27 @@
 package de.gzockoll.prototype.actorrole.control;
 
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;
-
 import de.gzockoll.prototype.actorrole.entity.Actor;
+import de.gzockoll.prototype.actorrole.entity.actor.Person;
+import javax.annotation.PostConstruct;
+import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
 
-@Service
+@Stateless
+@TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
 public class ManagerImpl extends AbstractManager implements Manger {
 
 	/* (non-Javadoc)
 	 * @see de.gzockoll.prototype.control.Manger#persist(de.gzockoll.prototype.entity.Actor)
 	 */
 	@Override
-	@Transactional(propagation = Propagation.REQUIRED)
 	public void persist(Actor a) {
 		em.persist(a);
 	}
+        
+        @PostConstruct
+        public void populateDatabase() {
+            Person p = new Person("Rudi","Müller");
+            persist(p);
+        }
 }

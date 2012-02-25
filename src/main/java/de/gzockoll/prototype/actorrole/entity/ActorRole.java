@@ -10,13 +10,7 @@
 package de.gzockoll.prototype.actorrole.entity;
 
 import java.io.Serializable;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 /**
  * 
@@ -24,22 +18,13 @@ import javax.persistence.ManyToOne;
  */
 @Entity()
 @Inheritance(strategy = InheritanceType.JOINED)
-public abstract class ActorRole implements Serializable {
-
-	@Id()
-	@GeneratedValue()
-	protected Integer id;
+public abstract class ActorRole extends AbstractEntity {
 
 	@ManyToOne()
 	protected Actor actor;
 
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    public ActorRole() {
+    }
 
 	public Actor getActor() {
 		return actor;

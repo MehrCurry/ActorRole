@@ -1,9 +1,13 @@
 package de.gzockoll.prototype.actorrole.entity;
 
+import java.io.Serializable;
 import javax.persistence.Embeddable;
 
 @Embeddable
-public class Address {
+public class Address implements Serializable {
+
+    public Address() {
+    }
 	public Address(String strasse, String hausnummer, String plz, String ort) {
 		this.strasse=strasse;
 		this.hausnummer=hausnummer;

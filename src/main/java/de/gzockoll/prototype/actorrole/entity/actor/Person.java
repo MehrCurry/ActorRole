@@ -28,6 +28,9 @@ import de.gzockoll.prototype.actorrole.entity.Actor;
 @Entity()
 public class Person extends Actor implements Serializable {
 
+    public Person() {
+    }
+
     public Person(String firstName, String lastName) {
 		super();
 		this.firstName = firstName;

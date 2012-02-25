@@ -22,6 +22,9 @@ import de.gzockoll.prototype.actorrole.entity.Actor;
 @Entity()
 public class Organization extends Actor implements Serializable {
 
+    public Organization() {
+    }
+
 	public Organization(String name) {
 		super();
 		this.commercialName = name;
