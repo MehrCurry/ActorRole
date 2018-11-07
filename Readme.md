@@ -6,4 +6,7 @@
 Bei Rückfragen nennen Sie uns bitte die Bestellnummer:
 **{{edvCode}}**
 
+Test mit
+Newline
+
 Oder verwenden Sie unser [Kontaktformular](https://xxx.de/servicecenter/{{edvCode}})
